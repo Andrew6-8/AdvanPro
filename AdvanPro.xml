@@ -3,7 +3,7 @@
     <mutation else="1"></mutation>
     <value name="IF0">
       <block type="logic_compare" id="179" inline="true">
-        <field name="OP">LT</field>
+        <field name="OP">GT</field>
         <value name="A">
           <block type="sensor_spectrometer" id="186">
             <field name="LIGHT">GREEN</field>
