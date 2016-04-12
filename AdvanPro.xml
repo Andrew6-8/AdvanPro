@@ -11,7 +11,7 @@
         <mutation elseif="1" else="1"></mutation>
         <value name="IF0">
           <block type="logic_compare" id="4" inline="true">
-            <field name="OP">GT</field>
+            <field name="OP">LT</field>
             <value name="A">
               <block type="sensor_spectrometer" id="5">
                 <field name="LIGHT">BLUE</field>
@@ -25,58 +25,58 @@
           </block>
         </value>
         <statement name="DO0">
-          <block type="movement_setmotors" id="9" inline="true">
+          <block type="movement_setmotors" id="7" inline="true">
             <value name="BOTHMOVLEFT">
-              <block type="math_number" id="10">
+              <block type="math_number" id="8">
                 <field name="NUM">99</field>
               </block>
             </value>
             <value name="BOTHMOVRIGHT">
-              <block type="math_number" id="11">
+              <block type="math_number" id="9">
                 <field name="NUM">89</field>
               </block>
             </value>
           </block>
         </statement>
         <value name="IF1">
-          <block type="logic_compare" id="15" inline="true">
+          <block type="logic_compare" id="10" inline="true">
             <field name="OP">GT</field>
             <value name="A">
-              <block type="sensor_spectrometer" id="16">
+              <block type="sensor_spectrometer" id="11">
                 <field name="LIGHT">BLUE</field>
               </block>
             </value>
             <value name="B">
-              <block type="math_number" id="17">
+              <block type="math_number" id="12">
                 <field name="NUM">80</field>
               </block>
             </value>
           </block>
         </value>
         <statement name="DO1">
-          <block type="movement_stop" id="18"></block>
+          <block type="movement_stop" id="13"></block>
         </statement>
         <statement name="ELSE">
-          <block type="movement_setmotors" id="29" inline="true">
+          <block type="movement_setmotors" id="14" inline="true">
             <value name="BOTHMOVLEFT">
-              <block type="math_number" id="30">
+              <block type="math_number" id="15">
                 <field name="NUM">99</field>
               </block>
             </value>
             <value name="BOTHMOVRIGHT">
-              <block type="math_number" id="31">
+              <block type="math_number" id="16">
                 <field name="NUM">89</field>
               </block>
             </value>
           </block>
         </statement>
         <next>
-          <block type="movement_stop" id="26"></block>
+          <block type="movement_stop" id="17"></block>
         </next>
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="27"></block>
+      <block type="movement_stop" id="18"></block>
     </next>
   </block>
 </xml>
