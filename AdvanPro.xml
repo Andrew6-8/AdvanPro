@@ -65,54 +65,50 @@
         <statement name="DO1">
           <block type="movement_stop" id="15">
             <next>
-              <block type="oled_cleardisplay" id="90">
+              <block type="oled_drawtext" id="44">
+                <field name="TEXT">ERROR</field>
                 <next>
-                  <block type="oled_drawtext" id="44">
-                    <field name="TEXT">ERROR</field>
+                  <block type="oled_setcursor" id="55" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="56">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="57">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
                     <next>
-                      <block type="oled_setcursor" id="55" inline="true">
-                        <value name="STARTX">
-                          <block type="math_number" id="56">
-                            <field name="NUM">0</field>
-                          </block>
-                        </value>
-                        <value name="STARTY">
-                          <block type="math_number" id="57">
-                            <field name="NUM">0</field>
-                          </block>
-                        </value>
+                      <block type="oled_drawtext" id="45">
+                        <field name="TEXT">ERROR</field>
                         <next>
-                          <block type="oled_drawtext" id="45">
-                            <field name="TEXT">ERROR</field>
+                          <block type="oled_setcursor" id="58" inline="true">
+                            <value name="STARTX">
+                              <block type="math_number" id="59">
+                                <field name="NUM">20</field>
+                              </block>
+                            </value>
+                            <value name="STARTY">
+                              <block type="math_number" id="60">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
                             <next>
-                              <block type="oled_setcursor" id="58" inline="true">
-                                <value name="STARTX">
-                                  <block type="math_number" id="59">
-                                    <field name="NUM">20</field>
-                                  </block>
-                                </value>
-                                <value name="STARTY">
-                                  <block type="math_number" id="60">
-                                    <field name="NUM">0</field>
-                                  </block>
-                                </value>
+                              <block type="oled_drawtext" id="69">
+                                <field name="TEXT">Fort Flask is Under Attack!</field>
                                 <next>
-                                  <block type="oled_drawtext" id="69">
-                                    <field name="TEXT">Fort Flask is Under Attack!</field>
-                                    <next>
-                                      <block type="oled_setcursor" id="70" inline="true">
-                                        <value name="STARTX">
-                                          <block type="math_number" id="71">
-                                            <field name="NUM">10</field>
-                                          </block>
-                                        </value>
-                                        <value name="STARTY">
-                                          <block type="math_number" id="72">
-                                            <field name="NUM">50</field>
-                                          </block>
-                                        </value>
+                                  <block type="oled_setcursor" id="70" inline="true">
+                                    <value name="STARTX">
+                                      <block type="math_number" id="71">
+                                        <field name="NUM">10</field>
                                       </block>
-                                    </next>
+                                    </value>
+                                    <value name="STARTY">
+                                      <block type="math_number" id="72">
+                                        <field name="NUM">50</field>
+                                      </block>
+                                    </value>
                                   </block>
                                 </next>
                               </block>
