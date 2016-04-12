@@ -1,66 +1,121 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_if" id="1" inline="false" x="57" y="75">
-    <mutation else="1"></mutation>
-    <value name="IF0">
-      <block type="logic_compare" id="2" inline="true">
-        <field name="OP">GT</field>
-        <value name="A">
-          <block type="sensor_spectrometer" id="3">
-            <field name="LIGHT">GREEN</field>
-          </block>
-        </value>
-        <value name="B">
-          <block type="math_number" id="4">
-            <field name="NUM">50</field>
-          </block>
-        </value>
+  <block type="controls_whileUntil" id="180" inline="false" x="86" y="17">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="187">
+        <field name="OBJECT">UP</field>
       </block>
     </value>
-    <statement name="DO0">
-      <block type="movement_setmotors" id="5" inline="true">
-        <value name="BOTHMOVLEFT">
-          <block type="math_number" id="6">
-            <field name="NUM">30</field>
-          </block>
-        </value>
-        <value name="BOTHMOVRIGHT">
-          <block type="math_number" id="7">
-            <field name="NUM">21</field>
-          </block>
-        </value>
-      </block>
-    </statement>
-    <statement name="ELSE">
-      <block type="controls_repeat" id="8" inline="true">
-        <value name="TIMES">
-          <block type="math_number" id="9">
-            <field name="NUM">2</field>
-          </block>
-        </value>
-        <statement name="DO">
-          <block type="movement_setmotors" id="10" inline="true">
-            <value name="BOTHMOVLEFT">
-              <block type="math_number" id="11">
-                <field name="NUM">99</field>
+    <statement name="DO">
+      <block type="controls_if" id="1" inline="false">
+        <mutation elseif="1" else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="2" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="sensor_spectrometer" id="3">
+                <field name="LIGHT">BLUE</field>
               </block>
             </value>
-            <value name="BOTHMOVRIGHT">
-              <block type="math_number" id="12">
-                <field name="NUM">90</field>
+            <value name="B">
+              <block type="math_number" id="4">
+                <field name="NUM">80</field>
               </block>
             </value>
-            <next>
-              <block type="robot_delay" id="13" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="14">
-                    <field name="NUM">3750</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_repeat" id="8" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="9">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="movement_setmotors" id="10" inline="true">
+                <value name="BOTHMOVLEFT">
+                  <block type="math_number" id="11">
+                    <field name="NUM">99</field>
                   </block>
                 </value>
+                <value name="BOTHMOVRIGHT">
+                  <block type="math_number" id="12">
+                    <field name="NUM">90</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="robot_delay" id="13" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="14">
+                        <field name="NUM">3750</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
               </block>
+            </statement>
+            <next>
+              <block type="movement_stop" id="15"></block>
             </next>
           </block>
         </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="130" inline="true">
+            <field name="OP">GT</field>
+            <value name="A">
+              <block type="sensor_spectrometer" id="131">
+                <field name="LIGHT">BLUE</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="132">
+                <field name="NUM">80</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="movement_stop" id="142"></block>
+        </statement>
+        <statement name="ELSE">
+          <block type="controls_repeat" id="157" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="158">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="movement_setmotors" id="159" inline="true">
+                <value name="BOTHMOVLEFT">
+                  <block type="math_number" id="160">
+                    <field name="NUM">99</field>
+                  </block>
+                </value>
+                <value name="BOTHMOVRIGHT">
+                  <block type="math_number" id="161">
+                    <field name="NUM">90</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="robot_delay" id="162" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="163">
+                        <field name="NUM">3750</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <next>
+          <block type="movement_stop" id="164"></block>
+        </next>
       </block>
     </statement>
+    <next>
+      <block type="movement_stop" id="188"></block>
+    </next>
   </block>
 </xml>
