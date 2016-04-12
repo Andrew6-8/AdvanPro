@@ -83,7 +83,7 @@
                         </value>
                         <next>
                           <block type="led_select" id="204" inline="true">
-                            <field name="ACTION">ON</field>
+                            <field name="ACTION">FLASH</field>
                             <value name="LED">
                               <block type="math_bitwise" id="217" inline="true">
                                 <field name="OP">AND</field>
@@ -100,60 +100,80 @@
                               </block>
                             </value>
                             <next>
-                              <block type="robot_delay" id="117" inline="true">
-                                <value name="DELAY">
-                                  <block type="math_number" id="118">
-                                    <field name="NUM">1000</field>
+                              <block type="led_select" id="247" inline="true">
+                                <field name="ACTION">OFF</field>
+                                <value name="LED">
+                                  <block type="math_bitwise" id="250" inline="true">
+                                    <field name="OP">AND</field>
+                                    <value name="A">
+                                      <block type="math_number" id="251">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="252">
+                                        <field name="NUM">10</field>
+                                      </block>
+                                    </value>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="oled_cleardisplay" id="157">
+                                  <block type="robot_delay" id="117" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="118">
+                                        <field name="NUM">1000</field>
+                                      </block>
+                                    </value>
                                     <next>
-                                      <block type="oled_drawtext" id="45">
-                                        <field name="TEXT">ERROR</field>
+                                      <block type="oled_cleardisplay" id="157">
                                         <next>
-                                          <block type="oled_setcursor" id="58" inline="true">
-                                            <value name="STARTX">
-                                              <block type="math_number" id="59">
-                                                <field name="NUM">0</field>
-                                              </block>
-                                            </value>
-                                            <value name="STARTY">
-                                              <block type="math_number" id="60">
-                                                <field name="NUM">0</field>
-                                              </block>
-                                            </value>
+                                          <block type="oled_drawtext" id="45">
+                                            <field name="TEXT">ERROR</field>
                                             <next>
-                                              <block type="robot_delay" id="119" inline="true">
-                                                <value name="DELAY">
-                                                  <block type="math_number" id="120">
-                                                    <field name="NUM">1000</field>
+                                              <block type="oled_setcursor" id="58" inline="true">
+                                                <value name="STARTX">
+                                                  <block type="math_number" id="59">
+                                                    <field name="NUM">0</field>
+                                                  </block>
+                                                </value>
+                                                <value name="STARTY">
+                                                  <block type="math_number" id="60">
+                                                    <field name="NUM">0</field>
                                                   </block>
                                                 </value>
                                                 <next>
-                                                  <block type="oled_cleardisplay" id="172">
+                                                  <block type="robot_delay" id="119" inline="true">
+                                                    <value name="DELAY">
+                                                      <block type="math_number" id="120">
+                                                        <field name="NUM">1000</field>
+                                                      </block>
+                                                    </value>
                                                     <next>
-                                                      <block type="oled_drawtext" id="173">
-                                                        <field name="TEXT">Malfunctioning</field>
+                                                      <block type="oled_cleardisplay" id="172">
                                                         <next>
-                                                          <block type="oled_setcursor" id="70" inline="true">
-                                                            <value name="STARTX">
-                                                              <block type="math_number" id="71">
-                                                                <field name="NUM">0</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="STARTY">
-                                                              <block type="math_number" id="72">
-                                                                <field name="NUM">0</field>
-                                                              </block>
-                                                            </value>
+                                                          <block type="oled_drawtext" id="173">
+                                                            <field name="TEXT">Malfunctioning</field>
                                                             <next>
-                                                              <block type="robot_delay" id="132" inline="true">
-                                                                <value name="DELAY">
-                                                                  <block type="math_number" id="133">
-                                                                    <field name="NUM">1000</field>
+                                                              <block type="oled_setcursor" id="70" inline="true">
+                                                                <value name="STARTX">
+                                                                  <block type="math_number" id="71">
+                                                                    <field name="NUM">0</field>
                                                                   </block>
                                                                 </value>
+                                                                <value name="STARTY">
+                                                                  <block type="math_number" id="72">
+                                                                    <field name="NUM">0</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="robot_delay" id="132" inline="true">
+                                                                    <value name="DELAY">
+                                                                      <block type="math_number" id="133">
+                                                                        <field name="NUM">1000</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
                                                               </block>
                                                             </next>
                                                           </block>
